@@ -1,4 +1,12 @@
 # node-block-io
+This project is an Api-rest to handle block.io services.
+
+- transfer
+- createWallet
+- getAddresses
+- getWalletBalance
+- getMoneyPrice
+- getNetworkFee
 
 ## Create a new wallet.
 To make the request follow this curl:
