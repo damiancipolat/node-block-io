@@ -11,12 +11,12 @@ The response request looks like:
 
 ```json
 {
-  status: 'success',
-  data: {
-    network: 'BTCTEST',
-    user_id: 5,
-    address: '2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC',
-    label: 'triwa44'
+  "status": "success",
+  "data": {
+    "network": "BTCTEST",
+    "user_id": 5,
+    "address": "2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC",
+    "label": "triwa44"
   }
 }
 ```
