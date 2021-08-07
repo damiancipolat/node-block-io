@@ -128,6 +128,11 @@ curl --location --request POST 'http://127.0.0.1:8080/BTC/wallet/transfer' \
 }'
 ```
 
+To use the **mock** endpoint:
+```sh
+http://127.0.0.1:8080/mock/BTC/wallet/transfer
+```
+
 The response request looks like:
 
 ```json
