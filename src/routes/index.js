@@ -1,21 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-const {
-    transferMoney,
-    newWallet,
-    getAllAdresses,
-    getBalance,
-    getPrice,
-    calcNetworkFee
-} = require('../controller');
+const main = require('../controller/main.js');
+const mock = require('../controller/mock.js');
 
-//Routes
-router.get('/:money/wallet/addresses',getAllAdresses);
-router.get('/:money/wallet/:id/balance',getBalance);
-router.get('/:money/price',getPrice);
-router.post('/:money/wallet',newWallet);
-router.post('/:money/wallet/fee',calcNetworkFee);
-router.post('/:money/wallet/transfer', transferMoney);
+//Main routes
+router.get('/:money/wallet/addresses',main.getAllAdresses);
+router.get('/:money/wallet/:id/balance',main.getBalance);
+router.get('/:money/price',main.getPrice);
+router.post('/:money/wallet',main.newWallet);
+router.post('/:money/wallet/fee',main.calcNetworkFee);
+router.post('/:money/wallet/transfer', main.transferMoney);
+
+//Mock routes.
+router.get('/mock/:money/wallet/:id/balance',mock.getBalance);
+router.post('/mock/:money/wallet/fee',mock.calcNetworkFee);
+router.post('/mock/:money/wallet/transfer', mock.transferMoney);
 
 module.exports = router;

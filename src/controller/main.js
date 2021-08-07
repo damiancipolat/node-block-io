@@ -5,7 +5,7 @@ const {
     getMoneyPrice,
     getNetworkFee,
     transfer
-} = require('../lib/blockio/');
+} = require('../lib/blockio');
 
 /**
  * Get list of address.
