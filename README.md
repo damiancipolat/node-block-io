@@ -89,6 +89,11 @@ The response request looks like:
 }
 ```
 
+To use the **mock** endpoint:
+```sh
+http://127.0.0.1:8080/BTC/wallet/2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC/balance
+```
+
 ## Estimate the cost of make a transaction.
 To make the request follow this curl:
 
@@ -126,6 +131,11 @@ curl --location --request POST 'http://127.0.0.1:8080/BTC/wallet/transfer' \
     "origin":"2NBXsXdeeoEVsdKQEAtRaRdR6tRbJMNf6g4",
     "destination":"2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC"
 }'
+```
+
+To use the **mock** endpoint:
+```sh
+http://127.0.0.1:8080/mock/BTC/wallet/transfer
 ```
 
 The response request looks like:
