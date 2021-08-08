@@ -55,6 +55,32 @@
 			"response": []
 		},
 		{
+			"name": "Get wallet balance mock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/mock/BTC/wallet/2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC/balance",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"mock",
+						"BTC",
+						"wallet",
+						"2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Money price",
 			"request": {
 				"method": "GET",
@@ -111,6 +137,40 @@
 			"response": []
 		},
 		{
+			"name": "Estimate network fee mock",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ammount\":\"0.00001671\",\n    \"destination\":\"2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/mock/BTC/wallet/fee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"mock",
+						"BTC",
+						"wallet",
+						"fee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Transfer money",
 			"request": {
 				"method": "POST",
@@ -144,7 +204,64 @@
 			"response": []
 		},
 		{
+			"name": "Transfer money mock",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ammount\":\"0.00001671\",    \n    \"origin\":\"2NBXsXdeeoEVsdKQEAtRaRdR6tRbJMNf6g4\",\n    \"destination\":\"2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/mock/BTC/wallet/transfer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"mock",
+						"BTC",
+						"wallet",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/BTC/wallet",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"BTC",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create wallet mock",
 			"request": {
 				"method": "POST",
 				"header": [],

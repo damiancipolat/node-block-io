@@ -1,11 +1,46 @@
 const {
-    getWalletBalance,
-    getNetworkFee,
-    transfer
+    getWalletBalance
 } = require('../lib/blockio/');
 
 const BALANCE_PLUS = 0.51698581;
 const NETWORK_FEE = 0.00000581;
+
+/**
+ * Create new wallet
+ * @param {object} req request object.
+ * @param {object} res response object.
+ */
+const newWallet = async(req, res) => {
+
+    try {
+
+        const {
+            money
+        } = req.params;
+
+        const mock = {
+            "status": "success",
+            "data": {
+              "network": money+"TEST",
+              "user_id": 5,
+              "address": "2N9xZAjmVpb8pCjJWUiwVcHtTayhhnwoAZC",
+              "label": "triwa44"
+            }
+        };
+
+        console.log({
+            message:'CREATE NEW WALLET',
+            money
+        });
+
+        res.status(200).json(mock);
+
+    } catch(error){
+        console.error({message:'Controller error',error});
+        res.status(500).json(error);
+    }
+
+}
 
 /**
  * Get wallet balance
@@ -135,6 +170,7 @@ const transferMoney =async (req, res) => {
 }
 
 module.exports={
+    newWallet,
     getBalance,
     calcNetworkFee,
     transferMoney
