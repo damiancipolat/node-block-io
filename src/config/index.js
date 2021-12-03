@@ -1,6 +1,6 @@
 const config = {
     server: {
-        port: process.env.SERVER_PORT
+        port: process.env.PORT
     },
     blockio:{
         prod:{
