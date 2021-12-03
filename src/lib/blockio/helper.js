@@ -5,7 +5,7 @@ const config = require('../../config/');
 const getKey = (money)=>{
 
     //Get process node env.
-    const env = process.env.NODE_ENV||'dev';
+    const env = 'develop';
 
     //Extract from config.
     const blockio = config.blockio;
