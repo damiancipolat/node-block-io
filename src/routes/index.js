@@ -13,8 +13,10 @@ router.post('/:money/wallet/fee',main.calcNetworkFee);
 router.post('/:money/wallet/transfer', main.transferMoney);
 
 //Mock routes.
-router.post('/mock/:money/wallet',mock.newWallet);
+router.get('/mock/:money/wallet/addresses',mock.getAddresses);
 router.get('/mock/:money/wallet/:id/balance',mock.getBalance);
+router.get('/mock/:money/price',mock.getPrice);
+router.post('/mock/:money/wallet',mock.newWallet);
 router.post('/mock/:money/wallet/fee',mock.calcNetworkFee);
 router.post('/mock/:money/wallet/transfer', mock.transferMoney);
 
