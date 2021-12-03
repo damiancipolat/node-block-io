@@ -82,9 +82,7 @@ const getAddresses = async (req, res) => {
 
         console.log({
             message:'Get addresses',
-            money,
-            ammount,
-            destination
+            money
         });
 
         res.status(200).json(mock);
